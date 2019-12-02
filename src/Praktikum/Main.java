@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Main {
-    public static void StringBytes(){
+    public static void Cara1(){
         String input = null;
         Scanner scan = new Scanner(System.in);
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
@@ -31,13 +31,13 @@ public class Main {
                 "\n >>>>>");
         char c = scan.next().charAt(0);
         if (c == 'Y' || c == 'y'){
-            StringBytes();
+            Cara1();
         }else{
             System.out.println("Goodbye Beb!");
         }
     }
 
-    public static void StringBuilderXXX(){
+    public static void Cara2(){
         String input = null;
         Scanner scan = new Scanner(System.in);
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
@@ -63,27 +63,58 @@ public class Main {
                 "\n >>>>>");
         char c = scan.next().charAt(0);
         if (c == 'Y' || c == 'y'){
-            StringBuilderXXX();
+            Cara2();
+        }else{
+            System.out.println("Goodbye Beb!");
+        }
+    }
+
+    public static void Cara3(){
+        String input = null;
+
+        Scanner scan = new Scanner(System.in);
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Masukkan String : ");
+        try {
+            input = bf.readLine();
+        }catch (Exception e){
+            System.out.println("String Bos!");
+        }
+
+        char[] Reverse  = input.toCharArray();
+        for (int i = input.length()-1; i >= 0; i--){
+            System.out.print(Reverse[i]);
+        }
+        System.out.println(" ");
+        System.out.print("\nLagi Beb ? Y/N" +
+                "\n >>>>>");
+        char c = scan.next().charAt(0);
+        if (c == 'Y' || c == 'y'){
+            Cara3();
         }else{
             System.out.println("Goodbye Beb!");
         }
     }
 
 
+
     public static void main(String[] args){
             Scanner scan = new Scanner(System.in);
-        System.out.print("1. String" +
-                "\n2. StringBuilder" +
-                "\n3. Exit" +
-                "\n>>>>>>");
+        System.out.print("Ada Banyak Cara, Saya Abil 3 : " +
+                "\n1. Using Byte" +
+                "\n2. Using Reverse Method" +
+                "\n3. Using toCharArray" +
+                "\n>>>> ");
         int input = scan.nextInt();
         switch (input){
             case 1  :
-                StringBytes();
+                Cara1();
                 break;
             case 2  :
-                StringBuilderXXX();
+                Cara2();
                 break;
+            case 3  :
+                Cara3();
             default :
                 break;
         }
